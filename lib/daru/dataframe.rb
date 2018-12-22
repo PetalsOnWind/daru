@@ -3103,4 +3103,35 @@ module Daru
       end
     end
   end
+
+  def dummy(data, prefix=None, prefix_separator='_', dummy_na=False, drop_first=False, dtype=None)
+  	# prefix: To be appended to each column name 
+  	# prefix separator: If appending, prefix separator to be used
+  	# dummy_na: Add a column to indicate null values, if null values are ignored
+  	# drop_first: whether to get n-1 dummies out of n dummies, ignoring one of the generated columns
+
+  	prefix_name= 'col'
+  	column_name
+
+  	used_values= []
+
+  	data.each(:row) do |row|
+  		if used_values.include? row(column_name)
+  		else
+  			used_values << row(column_name)
+  		end
+
+  	dummy_df =Daru::DataFrame.new(
+  	{
+  		
+  	})
+
+  	while (used_values)
+  		data.each(:row) do |row|
+
+
+
+
+
+
 end
